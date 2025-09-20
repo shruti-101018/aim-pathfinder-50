@@ -1,13 +1,17 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Users, Target, Shield, Award } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { Navbar } from "@/components/navbar";
 
 const Index = () => {
   const navigate = useNavigate();
+  const [language, setLanguage] = useState("en");
 
   return (
     <div className="min-h-screen bg-background">
+      <Navbar language={language} onLanguageChange={setLanguage} />
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="absolute inset-0 bg-gradient-hero opacity-5" />

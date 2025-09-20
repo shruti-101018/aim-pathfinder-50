@@ -22,20 +22,60 @@ interface InternshipFormProps {
   onSubmit: (data: FormData) => void;
 }
 
-const skillsOptions = [
-  "Communication Skills",
-  "Computer Basics",
-  "MS Office",
-  "Digital Marketing",
-  "Data Entry",
-  "Customer Service",
-  "Sales",
-  "Teaching",
-  "Writing",
-  "Design",
-  "Language Skills",
-  "Problem Solving"
-];
+const skillsOptions = {
+  "Technical Skills": [
+    "Computer Basics",
+    "MS Office",
+    "Data Entry", 
+    "Digital Marketing",
+    "Web Development",
+    "Programming",
+    "Database Management",
+    "Graphic Design",
+    "Video Editing",
+    "Social Media Management"
+  ],
+  "Communication Skills": [
+    "English Communication",
+    "Hindi Communication", 
+    "Regional Languages",
+    "Presentation Skills",
+    "Writing Skills",
+    "Public Speaking",
+    "Content Creation",
+    "Translation"
+  ],
+  "Business Skills": [
+    "Sales",
+    "Customer Service",
+    "Marketing",
+    "Accounting Basics",
+    "Business Development",
+    "Project Management",
+    "Leadership",
+    "Teamwork"
+  ],
+  "Professional Skills": [
+    "Problem Solving",
+    "Time Management",
+    "Critical Thinking",
+    "Analytical Skills",
+    "Research Skills",
+    "Documentation",
+    "Quality Control",
+    "Process Improvement"
+  ],
+  "Service Skills": [
+    "Teaching",
+    "Healthcare Support",
+    "Counseling",
+    "Community Service",
+    "Event Management",
+    "Tourism Guide",
+    "Food Service",
+    "Retail Operations"
+  ]
+};
 
 const sectorOptions = [
   "Information Technology",
@@ -232,23 +272,32 @@ export function InternshipForm({ onSubmit }: InternshipFormProps) {
           )}
 
           {currentStep === 3 && (
-            <div className="space-y-4">
+            <div className="space-y-6">
               <div>
                 <Label>Select your skills (choose at least 1)</Label>
-                <div className="grid grid-cols-2 gap-3 mt-3">
-                  {skillsOptions.map(skill => (
-                    <div key={skill} className="flex items-center space-x-2">
-                      <Checkbox
-                        id={skill}
-                        checked={formData.skills.includes(skill)}
-                        onCheckedChange={(checked) => handleSkillChange(skill, checked as boolean)}
-                      />
-                      <Label 
-                        htmlFor={skill} 
-                        className="text-sm font-normal cursor-pointer leading-tight"
-                      >
-                        {skill}
-                      </Label>
+                <div className="space-y-6 mt-4">
+                  {Object.entries(skillsOptions).map(([category, skills]) => (
+                    <div key={category} className="space-y-3">
+                      <h4 className="text-sm font-medium text-indian-saffron border-b border-border pb-1">
+                        {category}
+                      </h4>
+                      <div className="grid grid-cols-2 gap-3">
+                        {skills.map(skill => (
+                          <div key={skill} className="flex items-center space-x-2">
+                            <Checkbox
+                              id={skill}
+                              checked={formData.skills.includes(skill)}
+                              onCheckedChange={(checked) => handleSkillChange(skill, checked as boolean)}
+                            />
+                            <Label 
+                              htmlFor={skill} 
+                              className="text-sm font-normal cursor-pointer leading-tight"
+                            >
+                              {skill}
+                            </Label>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   ))}
                 </div>

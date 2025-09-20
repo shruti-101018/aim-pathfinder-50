@@ -36,7 +36,7 @@ const internshipDatabase: Omit<Internship, 'matchScore'>[] = [
     duration: "3 months",
     stipend: "₹8,000/month",
     description: "Learn digital marketing strategies, social media management, and content creation.",
-    requiredSkills: ["Digital Marketing", "Communication Skills", "Computer Basics"],
+    requiredSkills: ["Digital Marketing", "English Communication", "Computer Basics"],
     educationLevel: ["12th", "graduation", "postgraduation"],
     isRemote: true
   },
@@ -62,7 +62,7 @@ const internshipDatabase: Omit<Internship, 'matchScore'>[] = [
     duration: "4 months",
     stipend: "₹6,000/month",
     description: "Support primary education in rural schools, help with basic computer literacy.",
-    requiredSkills: ["Teaching", "Communication Skills", "Language Skills"],
+    requiredSkills: ["Teaching", "English Communication", "Regional Languages"],
     educationLevel: ["12th", "graduation"],
     isRemote: false
   },
@@ -75,7 +75,7 @@ const internshipDatabase: Omit<Internship, 'matchScore'>[] = [
     duration: "3 months",
     stipend: "₹10,000/month",
     description: "Handle customer queries, assist with banking services, learn financial products.",
-    requiredSkills: ["Customer Service", "Communication Skills", "Problem Solving"],
+    requiredSkills: ["Customer Service", "English Communication", "Problem Solving"],
     educationLevel: ["12th", "graduation"],
     isRemote: false
   },
@@ -88,7 +88,7 @@ const internshipDatabase: Omit<Internship, 'matchScore'>[] = [
     duration: "5 months",
     stipend: "₹7,500/month",
     description: "Support farmers with technology adoption, data collection, and crop monitoring.",
-    requiredSkills: ["Data Entry", "Communication Skills", "Problem Solving"],
+    requiredSkills: ["Data Entry", "English Communication", "Problem Solving"],
     educationLevel: ["10th", "12th", "diploma"],
     isRemote: false
   },
@@ -114,7 +114,7 @@ const internshipDatabase: Omit<Internship, 'matchScore'>[] = [
     duration: "3 months",
     stipend: "₹8,500/month",
     description: "Create content for websites, social media, and marketing materials.",
-    requiredSkills: ["Writing", "Communication Skills", "Digital Marketing"],
+    requiredSkills: ["Writing Skills", "English Communication", "Digital Marketing"],
     educationLevel: ["graduation", "postgraduation"],
     isRemote: true
   },
@@ -127,7 +127,7 @@ const internshipDatabase: Omit<Internship, 'matchScore'>[] = [
     duration: "6 months",
     stipend: "₹7,000/month",
     description: "Assist tourists, provide information about local culture and heritage sites.",
-    requiredSkills: ["Communication Skills", "Language Skills", "Customer Service"],
+    requiredSkills: ["English Communication", "Regional Languages", "Customer Service"],
     educationLevel: ["10th", "12th"],
     isRemote: false
   },
@@ -140,7 +140,7 @@ const internshipDatabase: Omit<Internship, 'matchScore'>[] = [
     duration: "4 months",
     stipend: "₹5,000/month",
     description: "Support community development programs and social welfare initiatives.",
-    requiredSkills: ["Communication Skills", "Problem Solving", "Teaching"],
+    requiredSkills: ["English Communication", "Problem Solving", "Teaching"],
     educationLevel: ["12th", "graduation"],
     isRemote: false
   },
@@ -153,7 +153,7 @@ const internshipDatabase: Omit<Internship, 'matchScore'>[] = [
     duration: "3 months",
     stipend: "₹8,000/month",
     description: "Customer interaction, inventory management, and sales support.",
-    requiredSkills: ["Sales", "Customer Service", "Communication Skills"],
+    requiredSkills: ["Sales", "Customer Service", "English Communication"],
     educationLevel: ["10th", "12th"],
     isRemote: false
   }
